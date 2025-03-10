@@ -1,8 +1,10 @@
 import axios from "axios";
 
 const instanse = axios.create({
-    baseURL: process.env.REACT_APP_API_URL,
+    baseURL: import.meta.env.VITE_API_URL,
 });
+
+
 
 instanse.interceptors.request.use((config) => {
     config.headers.Authorization = window.localStorage.getItem('token');
