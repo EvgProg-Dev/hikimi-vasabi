@@ -187,7 +187,8 @@ main {
 @media (max-width: 576px) {
   .custom-toast {
     width: 300px !important;
-
+    
   }
+
 
 }

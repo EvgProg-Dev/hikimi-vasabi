@@ -1,5 +1,5 @@
 .no_product_found {
-    margin-top: 200px;
+    margin-top: 100px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -22,6 +22,7 @@
 
 @media (max-width: 576px) {
     .no_product_found {
+        margin-top: 40px;
         width: 100%;
     }
     .no_product_found h2 {

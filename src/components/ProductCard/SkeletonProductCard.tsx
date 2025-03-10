@@ -5,7 +5,7 @@ export const SkeletonProductCard: FC = () => (
     <ContentLoader
         className="skeleton"
         speed={3}
-        width={260}
+        width={250}
         height={480}
         viewBox="0 0 260 480"
         backgroundColor="#f3f3f3"
