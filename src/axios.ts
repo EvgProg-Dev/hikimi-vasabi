@@ -4,6 +4,7 @@ const instanse = axios.create({
     baseURL: import.meta.env.VITE_API_URL,
 });
 
+console.log("API URL:", import.meta.env.VITE_API_URL);
 
 
 instanse.interceptors.request.use((config) => {
