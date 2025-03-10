@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instanse = axios.create({
-    baseURL: "http://192.168.31.8:4444",
+    baseURL: process.env.REACT_APP_API_URL,
 });
 
 instanse.interceptors.request.use((config) => {
