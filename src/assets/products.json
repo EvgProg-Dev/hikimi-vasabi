@@ -1,0 +1,63 @@
+[
+    {
+        "title": "Філадельфія з лососем",
+        "price": "295",
+        "weight": "280",
+        "composition": "рис, огірок, сир, лосось",
+        "image": "https://www.sushivasabi.com.ua/wp-content/uploads/2018/01/0010_Filadelfiia-losos-v2-400x533.png"
+    },
+
+    {
+        "title": "Філадельфія з вугрем",
+        "price": "320",
+        "weight": "280",
+        "composition": " рис, сир, огірок, вугор, соус “Унагі”, кунжут",
+        "image": "https://www.sushivasabi.com.ua/wp-content/uploads/2018/01/0015_Filadelfiia-vuhor-v2-400x533.png"
+    },
+
+    {
+        "title": "Філадельфія з тунцем",
+        "price": "250",
+        "weight": "280",
+        "composition": "рис, тунець, огірок, сир",
+        "image": "https://www.sushivasabi.com.ua/wp-content/uploads/2018/01/0009_Filadelfiia-tunets-v2-400x533.png"
+    },
+
+    {
+        "title": "Філадельфія креветка",
+        "price": "250",
+        "weight": "280",
+        "composition": "рис, огірок, сир, креветка, манговий соус",
+        "image": "https://www.sushivasabi.com.ua/wp-content/uploads/2020/02/0012_Filadelfiia-krevetka-z-manhovym-sousom-400x533.png"
+    },
+
+    {
+        "title": "Філадельфія гриль з лососем",
+        "price": "300",
+        "weight": "280",
+        "composition": "рис, сир, авокадо, лосось, соус унагі",
+        "image": "https://www.sushivasabi.com.ua/wp-content/uploads/2024/03/site__0018_Filadelfiia-hryl-z-losem-400x533.png"
+    },
+
+    {
+        "title": "Філадельфія з копченим лососем",
+        "price": "310",
+        "weight": "280",
+        "composition": "рис, сир, копчений лосось, огірок",
+        "image": "https://www.sushivasabi.com.ua/wp-content/uploads/2024/03/site__0017_Filadelfiia-z-kopchenym-lososem-400x533.png"
+    },
+    {
+        "title": "Філадельфія з копченим лососем",
+        "price": "310",
+        "weight": "280",
+        "composition": "рис, сир, копчений лосось, огірок",
+        "image": "https://www.sushivasabi.com.ua/wp-content/uploads/2024/03/site__0017_Filadelfiia-z-kopchenym-lososem-400x533.png"
+    },
+    {
+        "title": "Філадельфія з копченим лососем",
+        "price": "310",
+        "weight": "280",
+        "composition": "рис, сир, копчений лосось, огірок",
+        "image": "https://www.sushivasabi.com.ua/wp-content/uploads/2024/03/site__0017_Filadelfiia-z-kopchenym-lososem-400x533.png"
+    }
+]

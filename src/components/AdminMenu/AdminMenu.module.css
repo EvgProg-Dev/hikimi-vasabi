@@ -1,0 +1,25 @@
+.admin__menu {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    font-weight: 700;
+    height: 40px;
+}
+
+.admin__menu button {
+    padding: 4px 8px;
+    background-color: #ccc;
+    border-radius: 8px;
+}
+
+
+@media (max-width: 576px) {
+    .admin__menu {
+        gap: 20px;
+        font-size: 12px;
+    }
+    
+}

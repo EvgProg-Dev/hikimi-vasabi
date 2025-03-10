@@ -1,0 +1,35 @@
+.no_product_found {
+    margin-top: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+
+}
+
+.no_product_found h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.no_product_found p {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+@media (max-width: 576px) {
+    .no_product_found {
+        width: 100%;
+    }
+    .no_product_found h2 {
+        margin-top: 100px;
+        margin-bottom: 24px;
+        font-size: 24px;
+    }
+    .no_product_found p {
+        font-size: 16px;
+    }
+}

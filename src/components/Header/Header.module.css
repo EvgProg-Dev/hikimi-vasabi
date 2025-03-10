@@ -1,0 +1,151 @@
+.header {
+    background-color: #131313;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+
+
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.header__logo {
+    max-width: 200px;
+}
+
+.header__contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    color: #fff;
+    text-align: center;
+}
+
+.header__contacts a {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    gap: 12px;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 4px;
+}
+
+.header__contacts a:hover {
+    color: #ff0000;
+    fill: #ff0000;
+}
+
+.header__contacts svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+.header__button {
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 12px;
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #ff0000;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+
+    border: 2px solid transparent;
+}
+
+.header__button:hover {
+    border-color: #ff0000;
+    background-color: #fff;
+    color: #ff0000;
+    fill: #ff0000;
+}
+
+
+.header__line {
+    opacity: 0.5;
+
+    width: 1px;
+    height: 25px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.header__button:hover .header__line {
+    background-color: #ff0000;
+}
+
+.header__cart_count {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.header__cart_count svg {
+    height: 16px;
+    width: 16px;
+}
+
+.floating__contact {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .header__wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .header__button__wrapper {
+        z-index: 9999;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff11;
+        backdrop-filter: blur(4px);
+        padding: 16px 0;
+
+    }
+
+    .header__button {
+        margin: 0 auto;
+    }
+
+    .header__contacts {
+        display: none;
+    }
+
+    .floating__contact {
+        display: block;
+        position: fixed;
+        bottom: 12px;
+        right: 40px;
+        background: #fff;
+        border: 1px solid #ff0000;
+        padding: 16px 20px;
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 24px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .floating__contact svg {
+        fill: #ff0000;
+    }
+}
+
+
+@media (max-width: 576px) {}

@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "target": "es6", // Устанавливает версию ECMAScript
+        "module": "commonjs", // Используется для Node.js
+        "strict": true, // Включает строгие проверки типов
+        "esModuleInterop": true, // Включает поддержку импорта CommonJS
+        "skipLibCheck": true, // Пропускает проверку библиотек
+        "forceConsistentCasingInFileNames": true, // Проверка согласованности имен файлов
+        "outDir": "./dist", // Директория для выходных файлов
+        "baseUrl": ".", // Базовый путь для модулей
+        "jsx": "react-jsx", // Включает поддержку JSX для React (для React 17 и выше)
+        "lib": ["es2019", "dom"], // Библиотеки для поддержки ES6 и DOM
+        "resolveJsonModule": true, // Позволяет импортировать JSON
+        "allowJs": true, // Разрешает использовать JS файлы в проекте
+        "noImplicitAny": true, // Предупреждает о типах any
+        "noUnusedLocals": true, // Предупреждает о неиспользуемых переменных
+        "noUnusedParameters": true, // Предупреждает о неиспользуемых параметрах
+        "moduleResolution": "node" // Способ разрешения модулей
+    },
+
+    "include": [
+        "src/**/*" // Включает все файлы в папке src
+    ],
+    "exclude": [
+        "node_modules", // Исключает node_modules
+        "dist" // Исключает папку dist
+    ]
+}

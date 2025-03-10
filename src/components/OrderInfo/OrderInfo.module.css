@@ -1,0 +1,300 @@
+.orderDetails {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 50px 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.orderDetails h2 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.orderInfo {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fb;
+    padding: 30px 40px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #007bff;
+}
+
+.orderInfo .infoRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.orderInfo .infoRow label {
+    font-size: 1.2rem;
+    color: #444;
+    font-weight: bold;
+}
+
+.orderInfo .infoRow span,
+.orderInfo .infoRow select,
+.orderInfo .infoRow input {
+    font-size: 1.1rem;
+    color: #444;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 45%;
+}
+
+.orderInfo .infoRow input,
+.orderInfo .infoRow select {
+    width: 70%;
+}
+
+.orderInfo .infoRow select:focus,
+.orderInfo .infoRow input:focus {
+    border-color: #007bff;
+}
+
+.inputField {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.inputField label {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.inputField input,
+.inputField select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.inputField input:focus,
+.inputField select:focus {
+    border-color: #007bff;
+}
+
+.orderItems {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.orderItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+}
+
+.orderTitle {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.itemImage img {
+    max-width: 100px;
+    width: 100%;
+    /* height: 100px; */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.itemDetails {
+    flex-grow: 1;
+}
+
+.itemDetails p {
+    font-size: 1.1rem;
+    margin: 12px 0;
+    color: #666;
+}
+
+.itemDetails strong {
+    color: #333;
+    font-weight: bold;
+}
+
+.orderTotal {
+    font-size: 1.7rem;
+    font-weight: 700;
+    background-color: #f8f9fb;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    text-align: right;
+}
+
+.orderTotal span {
+    color: #ff0000;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.buttonContainer button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttonContainer button.save {
+    background-color: #28a745;
+    color: white;
+}
+
+.buttonContainer button.save:hover {
+    background-color: #218838;
+}
+
+.buttonContainer button.cancel {
+    background-color: #dc3545;
+    color: white;
+}
+
+.buttonContainer button.cancel:hover {
+    background-color: #c82333;
+}
+
+.spinnerContainer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.errorMessage {
+    color: red;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+@media (max-width: 576px) {
+    .orderDetails {
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    .orderDetails h2 {
+        font-size: 36px;
+    }
+
+    .orderInfo {
+
+        padding: 30px 10px;
+        border-left: transparent;
+    }
+
+    .orderInfo .infoRow {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+
+    .orderInfo .infoRow input,
+    .orderInfo .infoRow select {
+        width: 100%;
+    }
+
+    .orderItem {
+        flex-direction: column;
+    }
+
+
+    .orderTitle {
+        text-align: center;
+    }
+
+    .itemImage img {
+        max-width: 200px;
+    }
+
+
+
+
+    .orderTotal {
+        font-size: 20px;
+        text-align: center;
+        padding: 12px;
+
+    }
+
+    .orderTotal span {
+        color: #ff0000;
+    }
+
+    .buttonContainer {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .buttonContainer button {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .buttonContainer button.save {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .buttonContainer button.save:hover {
+        background-color: #218838;
+    }
+
+    .buttonContainer button.cancel {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .buttonContainer button.cancel:hover {
+        background-color: #c82333;
+    }
+
+    .spinnerContainer {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .errorMessage {
+        color: red;
+        font-size: 1.2rem;
+        margin-top: 20px;
+        text-align: center;
+    }
+}
