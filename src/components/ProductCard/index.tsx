@@ -11,7 +11,7 @@ export const ProductCard: FC<ProductType> = (product) => {
     const { _id, title, price, weight, composition, imageUrl } = product;
 
     return (
-        <div className={`${style.card} product-card-global`}>
+        <div className={`${style.card} product-card__global`}>
             <Link to={`/product-info/${_id}`} className={style.card__link}>
                 <img className={style.card__img} src={imageUrl} alt={title} />
 

@@ -1,29 +1,29 @@
 import { Route, Routes } from "react-router-dom";
 import { FC, useEffect } from "react";
 import { lazy, Suspense } from "react";
+import { ToastContainer } from "react-toastify";
 
-import { CreateProduct } from "./pages/CreateProductPage";
+import { RootState, useAppDispatch } from "./redux/store";
+import { fetchAuthMe } from "./redux/slices/authSlice";
+import { useSelector } from "react-redux";
+
 import { Home } from "./pages/HomePage";
+import NotFound from "./pages/NotFoundPage";
 
 import { Spinner } from "./components/Spinner";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Scroll } from "./components/Scroll";
 import { AdminMenu } from "./components/AdminMenu";
-
-import { RootState, useAppDispatch } from "./redux/store";
-import { fetchAuthMe } from "./redux/slices/authSlice";
-import { useSelector } from "react-redux";
+import { OrderInfo } from "./components/OrderInfo";
 
 import "./App.css";
-import { Order } from "./pages/OrderPage";
-import { ToastContainer } from "react-toastify";
-import { OrderInfo } from "./components/OrderInfo";
 
 const Cart = lazy(() => import("./pages/CartPage"));
 const ProductInfo = lazy(() => import("./pages/ProductInfoPage"));
-const NotFound = lazy(() => import("./pages/NotFoundPage"));
 const Login = lazy(() => import("./pages/LoginPage"));
+const CreateProduct = lazy(() => import("./pages/CreateProductPage"));
+const Order = lazy(() => import("./pages/OrderPage"));
 
 export const App: FC = () => {
     const isAuth = useSelector((state: RootState) => Boolean(state.auth.data));

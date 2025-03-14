@@ -16,7 +16,7 @@ export interface Order {
     totalPrice: number;
 }
 
-export const Order: FC = () => {
+const Order: FC = () => {
     const dispatch = useAppDispatch();
 
     const isAuth = useSelector((state: RootState) => Boolean(state.auth.data));
@@ -120,3 +120,6 @@ export const Order: FC = () => {
         </>
     );
 };
+
+
+export default Order;

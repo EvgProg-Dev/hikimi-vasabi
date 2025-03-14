@@ -11,7 +11,7 @@ import style from "./CreateProductPage.module.css";
 import { toast } from "react-toastify";
 import { Helmet } from "react-helmet-async";
 
-export const CreateProduct = () => {
+const CreateProduct = () => {
     const { id } = useParams();
     const isEditing = Boolean(id);
     const navigate = useNavigate();
@@ -208,3 +208,6 @@ export const CreateProduct = () => {
         </>
     );
 };
+
+
+export default CreateProduct;
