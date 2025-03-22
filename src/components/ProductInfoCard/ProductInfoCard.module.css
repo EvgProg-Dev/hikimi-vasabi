@@ -1,12 +1,18 @@
 .product__card {
+    position: relative;
     padding: 10px 12px;
     border-radius: 12px;
     background-color: #F2F2F2;
-    margin: 120px 0;
+    margin: 80px 0;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image__wrapper {
+    position: relative;
+
 }
 
 .product__card img {
@@ -14,6 +20,26 @@
     mix-blend-mode: multiply;
 
 }
+
+.card__gift {
+    background: linear-gradient(135deg, #ff94d1, #6fa2ef);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    text-align: center;
+    bottom: 20px;
+    max-width: 300px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 12px;
+    background-color: #E63946;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 8px;
+}
+
 
 
 .product__card_info {
@@ -72,6 +98,25 @@
     font-weight: bold;
 }
 
+.card__price_wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+.card__price_sale {
+    font-size: 40px;
+    font-weight: 700;
+    color: #E63946;
+}
+
+.card__price_old {
+    font-size: 18px;
+    color: #6c757d;
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
 
 .admin__buttons {
     margin-bottom: 30px;
@@ -93,45 +138,54 @@
     color: #fff
 }
 
-
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .product__card {
         margin: 60px 0;
         flex-direction: column;
     }
 
     .product__card img {
-        max-width: 250px;
+        max-width: 400px;
     }
 
     .product__card_info {
         width: 100%;
         max-width: 100%;
     }
+}
+
+
+@media (max-width: 576px) {
+
+
+    .product__card img {
+        max-width: 250px;
+    }
 
     .product__card_title {
         font-size: 24px;
     }
+
     .product__card_composition,
     .product__card_weight {
         /* display: inline-block; */
         line-height: 1.2;
-        
+
     }
 
     .admin__buttons {
-font-size: 16px;
-flex-direction: column;
-    
+        font-size: 16px;
+        flex-direction: column;
+
     }
-    
+
     .admin__buttons button {
         padding: 10px 12px;
         border-radius: 8px;
         transition: all 0.3s ease-in-out;
         font-weight: 600;
     }
-    
+
     .admin__buttons button:hover {
         background-color: #ff0000;
         color: #fff

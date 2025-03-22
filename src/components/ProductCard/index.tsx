@@ -5,15 +5,45 @@ import style from "./ProductCard.module.css";
 
 import { ProductType } from "src/types";
 import { ButtonAddToCart } from "../ButtonAddToCart";
-
+import { BadgeProductCard } from "../BadgeProductCard";
 
 export const ProductCard: FC<ProductType> = (product) => {
-    const { _id, title, price, weight, composition, imageUrl } = product;
+    const {
+        _id,
+        title,
+        price,
+        weight,
+        composition,
+        imageUrl,
+        rating,
+        isNewProduct,
+        salePrice,
+        gift,
+    } = product;
 
     return (
         <div className={`${style.card} product-card__global`}>
             <Link to={`/product-info/${_id}`} className={style.card__link}>
-                <img className={style.card__img} src={imageUrl} alt={title} />
+                <BadgeProductCard
+                    rating={rating}
+                    isNew={isNewProduct}
+                    salePrice={salePrice}
+                />
+
+                <div className={style.image__wrapper}>
+                    <img
+                        className={style.card__img}
+                        src={imageUrl}
+                        alt={title}
+                    />
+                    {gift && (
+                        <span className={style.card__gift}>
+                            🎁 Подарунок:
+                            <br />
+                            {gift}
+                        </span>
+                    )}
+                </div>
 
                 <h3 className={style.card__title}>{title}</h3>
 
@@ -33,7 +63,18 @@ export const ProductCard: FC<ProductType> = (product) => {
                         </>
                     )}
 
-                    <span className={style.card__price}>{price}₴</span>
+                    {salePrice ? (
+                        <div className={style.card__price_wrapper}>
+                            <span className={style.card__price_old}>
+                                {price}₴
+                            </span>
+                            <span className={style.card__price_sale}>
+                                {salePrice}₴
+                            </span>
+                        </div>
+                    ) : (
+                        <span className={style.card__price}>{price}₴</span>
+                    )}
                 </div>
             </Link>
 

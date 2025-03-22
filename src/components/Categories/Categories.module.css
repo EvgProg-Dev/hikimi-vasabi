@@ -4,6 +4,7 @@
 }
 
 .categories__list {
+    z-index: 99;
     display: flex;
     align-items: center;
     gap: 12px;

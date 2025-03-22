@@ -13,6 +13,31 @@
     font-size: 42px;
 }
 
+.sales_card__wrapper {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.product_sales_card {
+    text-align: center;
+    border-radius: 8px;
+    width: 250px;
+    height: 300px;
+    background-color: #e5e5e5;
+}
+
+.product_news_card {}
+
+.menu__title {
+    margin-top: 36px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 48px;
+}
+
 @media (max-width: 576px) {
     .product__title {
         text-align: center;

@@ -7,6 +7,9 @@ export type ProductType = {
     title: string;
     weight: number;
     _id: string;
+    salePrice: number;
+    isNewProduct: boolean;
+    gift: string;
 };
 
 export type CartItemType = {

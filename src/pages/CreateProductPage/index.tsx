@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 import axios from "../../axios";
 
@@ -8,10 +10,8 @@ import { categoriesList } from "../../list/categoriesList";
 import { RootState } from "src/redux/store";
 
 import style from "./CreateProductPage.module.css";
-import { toast } from "react-toastify";
-import { Helmet } from "react-helmet-async";
 
-const CreateProduct = () => {
+const CreateProduct: FC = () => {
     const { id } = useParams();
     const isEditing = Boolean(id);
     const navigate = useNavigate();
@@ -26,10 +26,13 @@ const CreateProduct = () => {
         title: "",
         composition: "",
         price: "",
+        salePrice: "",
         weight: "",
         category: "",
         rating: "",
         imageUrl: "",
+        isNewProduct: false,
+        gift: "",
     });
 
     useEffect(() => {
@@ -41,10 +44,13 @@ const CreateProduct = () => {
                         title: res.data.title || "",
                         composition: res.data.composition || "",
                         price: res.data.price || "",
+                        salePrice: res.data.salePrice || "",
+                        isNewProduct: res.data.isNewProduct || false,
                         weight: res.data.weight || "",
                         category: res.data.category || "",
                         rating: res.data.rating || "",
                         imageUrl: res.data.imageUrl || "",
+                        gift: res.data.gift || "",
                     });
                 })
                 .catch((error) => {
@@ -52,20 +58,32 @@ const CreateProduct = () => {
                 });
         }
     }, [id]);
-
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, type, value, checked } = e.target;
+
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value,
+            [name]: type === "checkbox" ? checked : value,
         });
     };
 
     const filteredData = Object.fromEntries(
-        Object.entries(formData).filter(([_, value]) => value !== "")
+        Object.entries(formData)
+            .map(([key, value]) => {
+                if (key === "salePrice" && value === "") {
+                    return [key, null];
+                }
+                if (key === "weight" && value === "") {
+                    return null;
+                }
+                return [key, value];
+            })
+            .filter((entry) => entry !== null)
     );
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
         try {
             const { data } = isEditing
                 ? await axios.patch(`/products/${id}`, filteredData)
@@ -133,6 +151,30 @@ const CreateProduct = () => {
                 </label>
 
                 <label>
+                    <div>Акційна ціна:</div>
+
+                    <input
+                        onChange={handleChange}
+                        type="number"
+                        name="salePrice"
+                        placeholder="Введіть акційну ціну"
+                        value={formData.salePrice}
+                    />
+                </label>
+
+                <label>
+                    <div>Подарунок:</div>
+
+                    <input
+                        onChange={handleChange}
+                        type="text"
+                        name="gift"
+                        placeholder="Введіть назву подарунка"
+                        value={formData.gift}
+                    />
+                </label>
+
+                <label>
                     Вага:
                     <input
                         onChange={handleChange}
@@ -196,6 +238,16 @@ const CreateProduct = () => {
                     />
                 </label>
 
+                <label className={style.label_isNew}>
+                    Новинка?:
+                    <input
+                        onChange={handleChange}
+                        type="checkbox"
+                        name="isNewProduct"
+                        checked={formData.isNewProduct}
+                    />
+                </label>
+
                 <div className={style.button__wrapper}>
                     <Link to={"/"} className={style.button}>
                         Повернутися на головну
@@ -208,6 +260,5 @@ const CreateProduct = () => {
         </>
     );
 };
-
 
 export default CreateProduct;

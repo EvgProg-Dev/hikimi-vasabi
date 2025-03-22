@@ -5,7 +5,10 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 import { RootState, useAppDispatch } from "../../redux/store";
-import { changeCurrentPage, changeFilters } from "../../redux/slices/filterSlice";
+import {
+    changeCurrentPage,
+    changeFilters,
+} from "../../redux/slices/filterSlice";
 import { fetchProducts } from "../../redux/slices/productSlice";
 
 import { sortList } from "../../list/sortList";
@@ -25,7 +28,6 @@ import style from "./HomePage.module.css";
 export const Home = () => {
     const navigate = useNavigate();
     const dispatch = useAppDispatch();
-    
 
     const isSearch = useRef(false);
     const isMounted = useRef(false);
@@ -95,7 +97,6 @@ export const Home = () => {
         isMounted.current = true;
     }, [activeCategory, activeSort, currentPage]);
 
-    
     if (status === "error") {
         return <ErrorPage errors={errors} />;
     }
@@ -104,6 +105,21 @@ export const Home = () => {
             <Helmet>
                 <title>Hikimi Vasabi - Суші шоп в Кременчуці</title>
             </Helmet>
+{/* 
+            <div>
+                <h2 className={style.menu__title}>🏷️ Акції</h2>
+                <div className={style.sales_card__wrapper}>
+                    <SkeletonProductCard />
+                    <SkeletonProductCard />
+                    <SkeletonProductCard />
+                    <SkeletonProductCard />
+                    <SkeletonProductCard />
+                </div>
+            </div>
+
+            <hr />
+
+            <h2 className={style.menu__title}>📖 Меню</h2> */}
 
             <Categories />
             <Sort />
@@ -127,7 +143,11 @@ export const Home = () => {
             )}
 
             {totalPages > 1 && (
-                <Pagination totalPages={totalPages} currentPage={currentPage} onPageChange={handlePageChange}/>
+                <Pagination
+                    totalPages={totalPages}
+                    currentPage={currentPage}
+                    onPageChange={handlePageChange}
+                />
             )}
         </>
     );

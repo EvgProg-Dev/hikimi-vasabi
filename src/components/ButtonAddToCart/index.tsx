@@ -12,6 +12,7 @@ export const ButtonAddToCart: FC<ProductType> = ({
     weight,
     composition,
     imageUrl,
+    salePrice,
 }) => {
     const dispatch = useAppDispatch();
 
@@ -23,7 +24,7 @@ export const ButtonAddToCart: FC<ProductType> = ({
         const item: CartItemType = {
             id: _id,
             title,
-            price,
+            price: salePrice ?? price,
             weight,
             composition,
             imageUrl,

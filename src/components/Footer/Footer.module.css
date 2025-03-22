@@ -14,7 +14,16 @@
 .footer__wrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: 36px;
+    margin: 36px 0;
+}
+.footer__wrapper div {
+    max-width: 200px;
+    text-align: center;
+}
+.footer__wrapper h3 {
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 700;
 
 }
 
@@ -23,6 +32,18 @@
 .footer__contacts {}
 
 .footer__info {}
+
+.footer__map_container {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.footer__map_container h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
 
 .admin__footer {
     font-weight: 700;

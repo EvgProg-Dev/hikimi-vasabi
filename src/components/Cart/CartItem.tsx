@@ -7,7 +7,6 @@ import { useAppDispatch } from "././../../redux/store";
 
 import { CartItemType } from "src/types";
 
-
 export const CartItem: FC<CartItemType> = ({
     id,
     title,
@@ -18,6 +17,7 @@ export const CartItem: FC<CartItemType> = ({
     price,
 }) => {
     const dispatch = useAppDispatch();
+
     return (
         <div key={id} className={style.cart__product}>
             <div className={style.product_info}>

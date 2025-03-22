@@ -1,0 +1,39 @@
+.badge_container {
+
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    /* transform: rotate(-16deg); */
+    top: 8px;
+    left: -8px;
+}
+
+.top_badge, .sale_badge, .new_badge {
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    padding: 4px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.top_badge {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+.sale_badge {
+    background-color: #007BFF;
+    color: white;
+}
+
+.new_badge {
+    background-color: #17c900;
+    color: white;
+}

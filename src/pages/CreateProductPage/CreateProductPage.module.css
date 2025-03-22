@@ -94,6 +94,11 @@
     background-color: transparent;
     border-color: #ff0000;
 }
+.label_isNew {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 @media (max-width: 576px) {
