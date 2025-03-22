@@ -19,7 +19,7 @@ export const categoriesList = [
     { id: "sets", title: "🍱 Сети" },
     { id: "salads", title: "🥗 Салати / Боули" },
     { id: "soups", title: "🍲 Супи" },
-    { id: "noodles", title: "🍜 Локшина / рис" },
+    { id: "noodles", title: "🍜 Локшина / Рис" },
     { id: "drinks", title: "🥤 Напої" },
     { id: "sauces", title: "🧴 Соуси" },
 ];
