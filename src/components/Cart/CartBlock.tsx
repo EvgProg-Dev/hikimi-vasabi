@@ -12,12 +12,13 @@ import { OrderModal } from "../OrderModal";
 
 export const CartBlock: FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    
 
     const { items, totalPrice, totalCount } = useSelector(
         (state: RootState) => state.cart
     );
     const dispatch = useAppDispatch();
+
+
 
     useEffect(() => {
         if (isModalOpen) {

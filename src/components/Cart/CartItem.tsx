@@ -18,6 +18,7 @@ export const CartItem: FC<CartItemType> = ({
 }) => {
     const dispatch = useAppDispatch();
 
+
     return (
         <div key={id} className={style.cart__product}>
             <div className={style.product_info}>

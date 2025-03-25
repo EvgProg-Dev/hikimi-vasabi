@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import { ProductType } from "src/types";
 
 import { ButtonAddToCart } from "../ButtonAddToCart";
@@ -50,7 +50,8 @@ export const ProductInfoCard: FC<ProductType> = (product) => {
                     <span className={style.card__gift}>
                         🎁 Подарунок:
                         <br />
-                        {gift}
+                        <strong>{gift}</strong>
+                        
                     </span>
                 )}
             </div>

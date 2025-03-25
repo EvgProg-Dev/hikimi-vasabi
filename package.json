@@ -27,7 +27,9 @@
     "react-paginate": "^8.3.0",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.1.5",
-    "react-toastify": "^11.0.5"
+    "react-slick": "^0.30.3",
+    "react-toastify": "^11.0.5",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
@@ -35,6 +37,7 @@
     "@types/qs": "^6.9.18",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
+    "@types/react-slick": "^0.23.13",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "eslint": "^9.19.0",
     "eslint-plugin-react": "^7.37.4",

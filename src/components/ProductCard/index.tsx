@@ -40,7 +40,7 @@ export const ProductCard: FC<ProductType> = (product) => {
                         <span className={style.card__gift}>
                             🎁 Подарунок:
                             <br />
-                            {gift}
+                            <strong>{gift}</strong>
                         </span>
                     )}
                 </div>

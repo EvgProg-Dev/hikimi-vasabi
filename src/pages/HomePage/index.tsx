@@ -24,6 +24,7 @@ import { NoProductsFound } from "../../components/NoProductFound";
 import { SkeletonProductCard } from "../../components/ProductCard/SkeletonProductCard";
 
 import style from "./HomePage.module.css";
+import MySlider from "../../components/Slider";
 
 export const Home = () => {
     const navigate = useNavigate();
@@ -105,6 +106,8 @@ export const Home = () => {
             <Helmet>
                 <title>Hikimi Vasabi - Суші шоп в Кременчуці</title>
             </Helmet>
+
+            <MySlider />
 {/* 
             <div>
                 <h2 className={style.menu__title}>🏷️ Акції</h2>
