@@ -10,6 +10,7 @@ import { categoriesList } from "../../list/categoriesList";
 import { RootState } from "src/redux/store";
 
 import style from "./CreateProductPage.module.css";
+import { translate } from "./../../utils/translate";
 
 const CreateProduct: FC = () => {
     const { id } = useParams();
@@ -34,6 +35,8 @@ const CreateProduct: FC = () => {
         isNewProduct: false,
         gift: "",
     });
+
+    const slug = translate(formData.title);
 
     useEffect(() => {
         if (id) {
@@ -68,22 +71,25 @@ const CreateProduct: FC = () => {
     };
 
     const filteredData = Object.fromEntries(
+
         Object.entries(formData)
             .map(([key, value]) => {
                 if (key === "salePrice" && value === "") {
                     return [key, null];
                 }
-                if (key === "weight" && value === "") {
-                    return null;
-                }
+                // if (key === "weight" && value === "") {
+                //     return null;
+                // }
                 return [key, value];
             })
             .filter((entry) => entry !== null)
     );
 
+
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-
+        console.log('filteredData: ', filteredData);
         try {
             const { data } = isEditing
                 ? await axios.patch(`/products/${id}`, filteredData)
@@ -91,7 +97,7 @@ const CreateProduct: FC = () => {
 
             const _id = isEditing ? id : data._id;
 
-            navigate(`/product-info/${_id}`);
+            navigate(`/product-info/${_id}/${slug}`);
             toast.success(
                 `${isEditing ? "Товар оновлено!" : "Товар створено!"}`
             );

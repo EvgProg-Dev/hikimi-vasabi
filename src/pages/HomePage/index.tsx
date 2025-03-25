@@ -108,21 +108,6 @@ export const Home = () => {
             </Helmet>
 
             <MySlider />
-{/* 
-            <div>
-                <h2 className={style.menu__title}>🏷️ Акції</h2>
-                <div className={style.sales_card__wrapper}>
-                    <SkeletonProductCard />
-                    <SkeletonProductCard />
-                    <SkeletonProductCard />
-                    <SkeletonProductCard />
-                    <SkeletonProductCard />
-                </div>
-            </div>
-
-            <hr />
-
-            <h2 className={style.menu__title}>📖 Меню</h2> */}
 
             <Categories />
             <Sort />

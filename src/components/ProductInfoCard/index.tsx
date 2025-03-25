@@ -51,7 +51,6 @@ export const ProductInfoCard: FC<ProductType> = (product) => {
                         🎁 Подарунок:
                         <br />
                         <strong>{gift}</strong>
-                        
                     </span>
                 )}
             </div>

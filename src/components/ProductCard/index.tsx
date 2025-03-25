@@ -6,6 +6,7 @@ import style from "./ProductCard.module.css";
 import { ProductType } from "src/types";
 import { ButtonAddToCart } from "../ButtonAddToCart";
 import { BadgeProductCard } from "../BadgeProductCard";
+import { translate } from "./../../utils/translate";
 
 export const ProductCard: FC<ProductType> = (product) => {
     const {
@@ -21,9 +22,11 @@ export const ProductCard: FC<ProductType> = (product) => {
         gift,
     } = product;
 
+    const slug = translate(title)
+
     return (
         <div className={`${style.card} product-card__global`}>
-            <Link to={`/product-info/${_id}`} className={style.card__link}>
+            <Link to={`/product-info/${_id}/${slug}`} className={style.card__link}>
                 <BadgeProductCard
                     rating={rating}
                     isNew={isNewProduct}

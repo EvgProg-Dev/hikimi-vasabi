@@ -12,6 +12,7 @@
 
 .image__wrapper {
     position: relative;
+    padding: 20px;
 
 }
 
@@ -27,7 +28,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: absolute;
     text-align: center;
-    bottom: 20px;
+    bottom: 12px;
     max-width: 300px;
     width: 100%;
     left: 50%;
